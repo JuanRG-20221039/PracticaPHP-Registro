@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuaio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Registro de usuairo</h1>
+    <main>
+        <h2>Nuevo Usuario</h2>
+        <form action="./php/registro.php" method="post" name="registro" autocomplete="off">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required minlength="10" pattern="[a-zA-Z ]+"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="usuario">Usuario:</label></td>
+                        <td><input type="text" name="user" id="user" placeholder="Usuario" required minlength="5" maxlength="10"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Contraseña:</label></td>
+                        <td><input type="password" name="pass" id="pass" placeholder="Contraseña" required minlength="8" maxlength="16"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass2">Confirmar contraseña:</label></td>
+                        <td><input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Correo electronico:</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="Correo electronico" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tel">Telefono:</label></td>
+                        <td><input type="tel" name="tel" id="tel" required minlength="10" maxlength="10" placeholder="Ejemplo: 7711223344" pattern="[0-9]{10}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">Genero:</label></td>
+                        <td><select name="sex" id="sex">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="X">Otro</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fch">Fecha de nacimiento:</label></td>
+                        <td><input type="date" name="fchnac" id="fchnac" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="registrar"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </main>
+    <footer>Registro | 2023</footer>
+    <script src="./js/registro.js"></script>
+</body>
+</html>
